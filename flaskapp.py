@@ -29,21 +29,32 @@ def hello(name):
 #  YOUR ROUTES GO BELOW THIS LINE
 #  Each exercise asks you to add a new @app.route here
 # ============================================================
-@app.route('/analyze/<word>/')
-def analyze(word):
-    vowels = {'a','e','i','o','u'}
+@app.route('/numchar/<word>/')
+def numchar(word):
+
     number = len(word)
-    
+
+    return render_template('numchar.html', word=word, number=number)
+
+
+@app.route('/numvowels/<word>/')
+def numvowels(word):
+    vowels = {'a','e','i','o','u'}
+
     vowel_count = 0
     for char in word:
         if char.lower() in vowels:
             vowel_count += 1
     
+
+    return render_template('numvowels.html', word=word, vowel_count=vowel_count)
+
+@app.route('/reversed/<word>/')
+def reversed(word):
+    
     reversed_word = word[::-1]
 
-    return render_template('analyze.html', word=word, number=number, vowel_count=vowel_count, reversed_word=reversed_word)
-
-
+    return render_template('reversed.html', word=word,reversed_word=reversed_word)
 
 # ============================================================
 #  These two lines always stay at the bottom of the file.

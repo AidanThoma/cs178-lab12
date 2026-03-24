@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Analyzer</title>
+    <style>
+        body {
+            font-family: monospace;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            background-color: #f0f4ff;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #0066cc;  /* EXERCISE 4: try changing this color */
+        }
+        img {
+            margin-top: 20px;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            color: #0066cc;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         EXERCISE 4: Customize this page! Ideas:
+           - Change the background color in the CSS above
+           - Swap the image below for a different URL
+           - Add a fun fact or quote
+           - Link to your /analyze/ page
+         ============================================================ -->
+
+    <!-- {{ name }} gets replaced with whatever the user typed in the URL -->
+    <h1>You entered the word: {{ word }}</h1>
+    <h1>Characters: {{ number }}</h1>
+
+    <p>You're visiting a Flask server running on AWS EC2.</p>
+
+    <br>
+    <a href="/">← back to home</a>
+
+</body>
+</html>
